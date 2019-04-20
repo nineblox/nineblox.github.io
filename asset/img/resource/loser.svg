@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1394.8 322.5">
+    <defs>
+        <style>
+            .cls-1 {
+                stroke: #f2f2f2;
+                stroke-miterlimit: 10;
+                stroke-width: 15px;
+                fill: #FF0000;
+            }
+        </style>
+        <filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+        		<!-- Thicken out the original shape -->
+        		<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+        		<!-- Use a gaussian blur to create the soft blurriness of the glow -->
+        		<feGaussianBlur in="thicken" stdDeviation="5" result="blurred" />
+
+        		<!-- Change the colour -->
+        		<feFlood flood-color="#f2f2f2" result="glowColor" />
+
+        		<!-- Color in the glows -->
+        		<feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+        		<!--	Layer the effects together -->
+        		<feMerge>
+          			<feMergeNode in="softGlow_colored"/>
+          			<feMergeNode in="SourceGraphic"/>
+        		</feMerge>
+      	</filter>
+    </defs>
+    <title>Loser</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1" d="M7.5,14.88h93.07V227.67H223.16l-7.79,80H7.5Z" />
+            <path class="cls-1" d="M390,315q-35.67,0-62.94-10.46t-45.92-30.13q-18.66-19.68-28.08-48t-9.43-64q0-35.67,9.43-64.16t28.29-48.79q18.86-20.3,46.74-31.16T392.49,7.5q35.67,0,62.93,10.46t45.92,30.13Q520,67.77,529.43,95.86t9.43,63.75q0,35.67-9.64,64.58t-28.29,49q-18.66,20.1-46.53,30.95T390,315Zm1.23-79.95q51.24,0,51.25-73.8t-51.25-73.8q-51.25,0-51.25,73.8T391.26,235.05Z" />
+            <path class="cls-1" d="M655.71,210.45q2.46,16.41,12.91,25t31.78,8.61q17.22,0,25.21-5.53t8-16.2q0-8.19-5.54-13.12t-20.7-8.2l-39.77-7.79q-51.26-10.24-74.42-32T570,103.44q0-23.37,8.81-41.2a84.39,84.39,0,0,1,25-30.14Q620,19.8,643.2,13.65T695.07,7.5q31.15,0,53.91,7T786.7,34a85.17,85.17,0,0,1,22.76,28.9,102.37,102.37,0,0,1,9.43,35.26l-90.61,8.2q-3.69-16-12.1-21.93t-24-5.95q-16.82,0-24.19,5.33t-7.38,13.53a14.15,14.15,0,0,0,5.53,11.48q5.54,4.52,21.12,7.79l39.36,8.2q26.64,5.74,45.3,13.74t30.34,19.06a67.17,67.17,0,0,1,17,25.22q5.33,14.15,5.33,32.59,0,47.57-33,73.59t-97,26q-32.4,0-56.38-7.17t-40-20.71a88.62,88.62,0,0,1-24.4-33q-8.4-19.47-10-43.67Z" />
+            <path class="cls-1" d="M859.07,14.88h217.71V86.63H950.5v37.31h118.08v71.75H950.5v40.18H1085l-7,71.75H859.07Z" />
+            <path class="cls-1" d="M1364.59,110.82q0,29.52-11.27,50.43a91.35,91.35,0,0,1-31.78,34l60.68,112.34H1287.1l-46.74-93.89h-32.8v93.89h-87.74V14.88h125.67q33.67,0,56.47,7.59T1338.72,43a72.75,72.75,0,0,1,19.91,30.54A115.56,115.56,0,0,1,1364.59,110.82Zm-157,35.26h31q20.78,0,29.55-7.79t8.76-23.37q0-15.57-8.76-23.37t-29.55-7.79h-31Z" />
+        </g>
+    </g>
+</svg>
